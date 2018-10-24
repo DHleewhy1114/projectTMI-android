@@ -9,7 +9,7 @@ interface HTTPResponseData{
 
 
 data class TimelineResponseData(
-        override val id:String, val author:String,val contents:String,val edited:String):HTTPResponseData
+        override val id:String, val author:String,val contents:String,val created:String):HTTPResponseData
 
 data class MatchingResponseData(
         override val id:String, val user_id:String):HTTPResponseData

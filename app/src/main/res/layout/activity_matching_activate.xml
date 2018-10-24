@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchingActivateActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/matching_activate_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp">
+        <!-- 레이아웃 한줄로 나올수있게 조정 -->
+        <!--<imagebutton>-->
+        <!--<imagebutton>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="함께하는 활동"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/matching_activate_participant"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+            <TextView
+                android:id="@+id/matching_activate_place"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/matching_activate_question"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/matching_activate_enter"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/matching_activate_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/matching_activate_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
