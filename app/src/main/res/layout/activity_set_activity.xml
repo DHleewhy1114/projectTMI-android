@@ -22,11 +22,12 @@
         />
 
 
-
+<!--pp:layout_constraintTop_toBottomOf="@+id/set_activity_toolbar"-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/set_activity_body"
-        app:layout_constraintTop_toBottomOf="@+id/set_activity_toolbar"
+        android:layout_marginTop="@dimen/toolBarHeight"
         android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_activity_toolbar"
         android:layout_width="match_parent"
         android:orientation="vertical">
         <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolBarHeight">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/matching_activate_toolbar"
+        android:id="@+id/toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolBarHeight"
         android:background="@color/colorPrimary"
         android:elevation="4dp">
+        <ImageButton
+            android:id="@+id/toolbar_back"
+            android:layout_width="@dimen/backIconSize"
+            android:layout_height="@dimen/backIconSize"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_arrow_back"/>
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"

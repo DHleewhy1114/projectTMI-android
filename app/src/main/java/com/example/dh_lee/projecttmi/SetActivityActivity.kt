@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import android.view.ViewGroup.LayoutParams.FILL_PARENT
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.size
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.databinding.adapters.ToolbarBindingAdapter
@@ -32,18 +33,19 @@ class SetActivityActivity : AppCompatActivity() {
         setIDs()
         setTexts()
         toolbar_title.text="제목들어감"
+
         /*
         val binding:ToolbarBinding = setContentView(this, R.layout.toolbar)
         val user = com.example.dh_lee.projecttmi.Toolbar("활동 만들기")
         binding.setUser(user)*/
 
     }
-
     override fun onStart() {
         super.onStart()
-        val a =getDeviceSize(this)
-        Log.e("headerhegiht",header.layoutParams.height.toString())
-        a.substractSize(body,header)
+        //val a =getDeviceSize(this)
+        //Log.e("headerhegiht",header.size.toString())
+        //Log.e("bodyhegiht",body.layoutParams.height.toString())
+        //a.substractSize(body,header)
     }
 
     private fun setIDs(){
