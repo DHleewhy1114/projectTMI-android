@@ -24,7 +24,11 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".MatchingActivateActivity" />
         <activity android:name=".WriteTimelineActivity" />
-        <activity android:name=".SetActivityActivity"></activity>
+        <activity android:name=".SetActivityActivity" />
+        <activity android:name=".DailyRecord" />
+        <activity android:name=".DailyMeal" />
+        <activity android:name=".DailyExercise" />
+        <activity android:name=".DailyDrug"></activity>
     </application>
 
 </manifest>

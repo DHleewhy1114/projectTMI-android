@@ -5,20 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MatchingActivateActivity">
-    <androidx.appcompat.widget.Toolbar
+    <include
         android:id="@+id/matching_activate_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:elevation="4dp">
-        <!-- 레이아웃 한줄로 나올수있게 조정 -->
-        <!--<imagebutton>-->
-        <!--<imagebutton>-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="함께하는 활동"/>
-    </androidx.appcompat.widget.Toolbar>
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

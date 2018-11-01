@@ -48,7 +48,7 @@ class ViewContainer : AppCompatActivity() {
         fab.setOnClickListener{
             when(tabs.selectedTabPosition){
                 0->{
-                 ""
+                    setintent(DailyRecord())
                 }
                 1->{
 

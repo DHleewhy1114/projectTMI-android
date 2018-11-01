@@ -9,9 +9,7 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import android.widget.TextView
-
-
-
+import kotlinx.android.synthetic.main.toolbar.*
 
 
 class WriteTimelineActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
@@ -33,12 +31,11 @@ class WriteTimelineActivity : AppCompatActivity(),AdapterView.OnItemSelectedList
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_write_timeline)
         publicSpinner = findViewById(R.id.topublic)
+        toolbar_title.text="이쪽은 매칭 타이틀"
         //spinnerText=publicSpinner.selectedItem.toString()
         val adapter:ArrayAdapter<CharSequence> =ArrayAdapter.createFromResource(this, R.array.topublic,
                 android.R.layout.simple_spinner_item)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item){
-            
-        }
+
         publicSpinner.adapter=adapter
         publicSpinner.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
@@ -52,9 +49,5 @@ class WriteTimelineActivity : AppCompatActivity(),AdapterView.OnItemSelectedList
             }
         })
     }
-
-}
-
-private fun <T> ArrayAdapter<T>.setDropDownViewResource(simple_spinner_dropdown_item: Int, function: () -> Unit) {
 
 }

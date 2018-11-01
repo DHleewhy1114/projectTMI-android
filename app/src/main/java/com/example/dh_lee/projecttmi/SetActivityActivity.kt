@@ -10,6 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import android.view.ViewGroup.LayoutParams.FILL_PARENT
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil.setContentView
+import androidx.databinding.adapters.ToolbarBindingAdapter
+import kotlinx.android.synthetic.main.activity_set_activity.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 
 class SetActivityActivity : AppCompatActivity() {
@@ -18,20 +23,26 @@ class SetActivityActivity : AppCompatActivity() {
     lateinit var setActivityPlace:TextView
     lateinit var setActivityParticipant:TextView
     lateinit var setActivityContents:TextView
-    lateinit var header:androidx.appcompat.widget.Toolbar
     lateinit var body:ConstraintLayout
     lateinit var finishButton:MaterialButton
+    lateinit var header:ConstraintLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_set_activity)
         setIDs()
         setTexts()
+        toolbar_title.text="제목들어감"
+        /*
+        val binding:ToolbarBinding = setContentView(this, R.layout.toolbar)
+        val user = com.example.dh_lee.projecttmi.Toolbar("활동 만들기")
+        binding.setUser(user)*/
 
     }
 
     override fun onStart() {
         super.onStart()
         val a =getDeviceSize(this)
+        Log.e("headerhegiht",header.layoutParams.height.toString())
         a.substractSize(body,header)
     }
 
