@@ -5,5 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyRecordActivity">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="@dimen/recordCardMargin"
+                android:layout_width="240dp"
+                android:layout_height="268dp">
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@
         android:id="@+id/matching_activate_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimary"
         android:elevation="4dp">
         <!-- 레이아웃 한줄로 나올수있게 조정 -->
         <!--<imagebutton>-->
@@ -25,22 +25,35 @@
         android:orientation="vertical"
         >
         <TextView
+            android:id="@+id/matching_activate_hashtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/matching_activate_title"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             >
-            <TextView
-                android:id="@+id/matching_activate_participant"
+            <LinearLayout
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"/>
+                android:orientation="horizontal"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/matching_activate_participant"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <TextView
+                    android:id="@+id/matching_activate_place"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </LinearLayout>
             <TextView
-                android:id="@+id/matching_activate_place"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"/>
-
+                android:id="@+id/matching_activate_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
         <LinearLayout
             android:layout_height="wrap_content"
@@ -55,10 +68,6 @@
                 android:layout_width="wrap_content" />
 
         </LinearLayout>
-        <TextView
-            android:id="@+id/matching_activate_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/matching_activate_contents"
             android:layout_width="match_parent"

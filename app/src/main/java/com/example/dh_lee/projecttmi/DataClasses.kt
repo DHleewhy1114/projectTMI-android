@@ -7,12 +7,11 @@ interface HTTPResponseData{
 
 }
 
-
 data class TimelineResponseData(
-        override val id:String, val author:String,val contents:String,val created:String):HTTPResponseData
+        override val id:String, val author:String,val contents:String,val created:String,val islikeit:String):HTTPResponseData
 
 data class MatchingResponseData(
-        override val id:String, val user_id:String):HTTPResponseData
+        override val id:String,val title:String, val participant_number:String,val total_participant:String,val place:String,val date:String):HTTPResponseData
 
 
 

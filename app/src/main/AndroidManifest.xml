@@ -22,7 +22,9 @@
         <activity android:name=".MatchingActivity" />
         <activity android:name=".FirstEnter" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".MatchingActivateActivity"></activity>
+        <activity android:name=".MatchingActivateActivity" />
+        <activity android:name=".WriteTimelineActivity" />
+        <activity android:name=".SetActivityActivity"></activity>
     </application>
 
 </manifest>

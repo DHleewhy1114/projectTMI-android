@@ -1,12 +1,15 @@
 package com.example.dh_lee.projecttmi
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 
-class MyRecordActivity : AppCompatActivity() {
+class MyRecordActivity : Fragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val inf_view = inflater.inflate(R.layout.activity_my_record, container, false)
+        return inf_view
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_record)
     }
 }

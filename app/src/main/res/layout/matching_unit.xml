@@ -1,46 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="5dp">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/matching_card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="110dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/for_orientation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-            <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content" />
-                <com.google.android.material.button.MaterialButton
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="함께하기"/>
-
-            </LinearLayout>
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/matching_top"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
+                android:layout_marginTop="38dp"
                 android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/matching_title"
+                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="함께 취업준비해요"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="함께하기"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="30dp"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/matching_bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintBottom_toBottomOf="parent">
                 <TextView
                     android:id="@+id/matching_participant"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content" />
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="참여인원 8/10"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+
                 <TextView
                     android:id="@+id/matching_date"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content" />
+                    android:layout_width="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="2018.10.24"/>
                 <TextView
                     android:id="@+id/matching_place"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content" />
-            </LinearLayout>
-        </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:text="서울특별시 화곡 1동"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="16dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
 

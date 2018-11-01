@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nomalText">15sp</dimen>
+    <dimen name="recordCardMargin">12dp</dimen>
+    <dimen name="chipText">7sp</dimen>
+    <dimen name="backIconSize">44dp</dimen>
+    <dimen name="backIconMarginLeft">8dp</dimen>
+    <dimen name="backIconMarginTop">10dp</dimen>
+    <dimen name="toolBarHeight">44dp</dimen>
+</resources>
