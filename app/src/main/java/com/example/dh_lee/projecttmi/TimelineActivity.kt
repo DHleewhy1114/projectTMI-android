@@ -18,12 +18,13 @@ import com.google.android.material.button.MaterialButton
 import android.widget.FrameLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat.getSystemService
-
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 
 class TimelineActivity : Fragment() {
     lateinit var recycle:RecyclerView
     lateinit var layoutManager: LinearLayoutManager
+    lateinit var recy:RecyclerView
     val maxItemsPerRequest:Int=5
     val lists:ArrayList<TimelineResponseData> = ArrayList()
     val list=TimelineResponseData("1","이현호","머리가 아프다 ","10월 24일","true")
@@ -32,15 +33,16 @@ class TimelineActivity : Fragment() {
     //lateinit var addedReply:View
     private lateinit var scrollListener:RecyclerView.OnScrollListener
     private lateinit var likeIt:MaterialButton
-
+    private lateinit var timelineSwipe:SwipeRefreshLayout
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val inf_view =inflater.inflate(R.layout.activity_time_line, container, false)
-        val recy= inf_view.findViewById<RecyclerView>(R.id.timeline_recyclerview)
+        recy= inf_view.findViewById<RecyclerView>(R.id.timeline_recyclerview)
+
+        timelineSwipe=inf_view.findViewById(R.id.timeline_swipe)
         //replyBlock=inflater.inflate(R.layout.timeline_reply,container,false)
         //addedReply=inf_view.findViewById(R.id.added_reply_block)
         //var likeit=inf_view.findViewById<MaterialButton>(R.id.like_it)
         val lastVisibleItemPosition:Int=1
-        //val mLayoutManager = LinearLayoutManager(getActivity());
         lists.add(list)
         lists.add(list)
         lists.add(list)
@@ -60,6 +62,17 @@ class TimelineActivity : Fragment() {
         recy.adapter=TimelineAdapter(lists,context)
         recy.addOnScrollListener(InfiniteScrollListener({ Log.e("timelinescroll","will be more request")},linearlayout))
         return inf_view
+
+    }
+    override fun onStart() {
+        super.onStart()
+        timelineSwipe.setOnRefreshListener(object: SwipeRefreshLayout.OnRefreshListener{
+            override fun onRefresh() {
+                recy.adapter=TimelineAdapter(lists,this@TimelineActivity.context!!)
+                timelineSwipe.isRefreshing = false
+            }
+
+        })
 
     }
     private fun addReple(){

@@ -34,6 +34,8 @@
             android:lineSpacingExtra="7sp"
             android:gravity="center_horizontal"
             android:background="#ffffff"
+            android:backgroundTint="@color/colorWhite"
+            android:shadowColor="@color/colorWhite"
             android:text="도담"/>
 
         <androidx.appcompat.widget.SearchView
@@ -135,11 +137,12 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="105dp"
         android:background="#eeeeee"
         android:isScrollContainer="true"
         android:nestedScrollingEnabled="true"
-        app:layout_constraintTop_toTopOf="parent" /><!--height ㄱㅏ MATCH_PARENT여야 사이즈 맞음...-->
+        app:layout_constraintTop_toTopOf="parent"
+        /><!--height ㄱㅏ MATCH_PARENT여야 사이즈 맞음...-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

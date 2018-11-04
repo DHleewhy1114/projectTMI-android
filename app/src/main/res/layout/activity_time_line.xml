@@ -5,12 +5,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/timeline_swipe"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/timeline_recyclerview"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"/>
-    </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>
