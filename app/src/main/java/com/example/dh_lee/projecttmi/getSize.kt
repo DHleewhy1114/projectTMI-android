@@ -20,10 +20,9 @@ class getDeviceSize(activity:Context) {
         return display.heightPixels
     }
 
-    public fun substractSize(view2: View, view1: View) {
+    public fun substractSizeWithView(view2: View, view1: View) {
         val headerHeight = view1.layoutParams.height
-        //val headerHeight=view1
-        //Log.e("vuew1",view1.layoutParams.height.toString())
+        Log.e("vuew1",view1.layoutParams.height.toString())
         view2.layoutParams.height = this.returnheight() - headerHeight
         Log.e("vuew2",view2.layoutParams.height.toString())
         val lp = view2.getLayoutParams() as ConstraintLayout.LayoutParams
@@ -32,4 +31,5 @@ class getDeviceSize(activity:Context) {
         Log.e("changed view2",view2.layoutParams.height.toString())
 
     }
+
 }

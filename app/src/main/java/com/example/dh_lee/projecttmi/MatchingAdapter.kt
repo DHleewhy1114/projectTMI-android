@@ -26,7 +26,7 @@ class MatchingAdapter(val matchingData:List<MatchingResponseData>, val context: 
 
     class MatchingViewHolder(view: View): RecyclerView.ViewHolder(view){
         fun bind(item:MatchingResponseData){
-            itemView.matching_participant.text=item.participant_number
+            itemView.matching_participant_number.text=item.participant_number
             itemView.matching_date.text=item.date
             itemView.matching_place.text=item.place
         }

@@ -12,7 +12,3 @@ data class TimelineResponseData(
 
 data class MatchingResponseData(
         override val id:String,val title:String, val participant_number:String,val total_participant:String,val place:String,val date:String):HTTPResponseData
-
-
-enum class ToolbarData(val title: String){
-}

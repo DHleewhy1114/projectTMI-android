@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="@dimen/toolBarHeight">
@@ -9,18 +9,41 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolBarHeight"
         android:background="@color/colorPrimary"
-        android:elevation="4dp">
+        android:elevation="4dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:paddingLeft="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <ImageButton
             android:id="@+id/toolbar_back"
             android:layout_width="@dimen/backIconSize"
             android:layout_height="@dimen/backIconSize"
             android:background="@color/colorPrimary"
-            android:src="@drawable/ic_arrow_back"/>
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintLeft_toLeftOf="parent"/>
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{toolbar.title}"
+            app:layout_constraintLeft_toRightOf="@id/toolbar_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/toolbar_finish"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/backIconSize"
+            android:background="@drawable/toolbar_button"
+            android:textColor="@color/colorWhite"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.appcompat.widget.Toolbar>
 </androidx.constraintlayout.widget.ConstraintLayout>

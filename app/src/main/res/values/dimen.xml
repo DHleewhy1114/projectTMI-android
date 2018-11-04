@@ -8,4 +8,6 @@
     <dimen name="backIconMarginTop">10dp</dimen>
     <dimen name="toolBarHeight">44dp</dimen>
     <dimen name="recordIconSize">20dp</dimen>
+    <dimen name="writeTimelineIconSize">39.6dp</dimen>
+    <dimen name="timeLineLeftMargin">16dp</dimen>
 </resources>

@@ -8,12 +8,19 @@
     tools:context=".ViewContainer"
     android:layout_marginTop="2dp"
     android:layout_marginBottom="3dp">
-    <androidx.appcompat.widget.Toolbar
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_container_header"
+        android:layout_width="match_parent"
+        android:layout_height="104dp">
+        <Toolbar
         android:id="@+id/view_container_toolbar"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:background="@color/colorWhite"
-        android:elevation="4dp">
+        android:elevation="4dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintTop_toTopOf="parent"
+        >
         <!-- 레이아웃 한줄로 나올수있게 조정 -->
         <!--<imagebutton>-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,37 +76,41 @@
 
         <!--<imagebutton>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.appcompat.widget.Toolbar>
+    </Toolbar>
 
     <com.google.android.material.tabs.TabLayout
         app:layout_constraintTop_toBottomOf="@id/view_container_toolbar"
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:background="@color/colorWhite"
         app:tabTextColor="@color/colorPrimary"
         app:tabIconTint="@color/colorPrimary"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        app:tabGravity="fill"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabSelectedTextColor="@color/colorWhite"
+        >
 
         <com.google.android.material.tabs.TabItem
             android:text="내 기록"
-            android:background="@drawable/myrecordicon"
             android:icon="@drawable/icon"
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             >
         </com.google.android.material.tabs.TabItem>
+
         <com.google.android.material.tabs.TabItem
             android:text="타임라인"
-            android:icon="@drawable/ic_arrow_back"
+            android:icon="@drawable/noun_timeline"
             android:layout_height="match_parent"
             android:layout_width="wrap_content" />
         <com.google.android.material.tabs.TabItem
             android:text="활동찾기"
-            android:icon="@drawable/ic_arrow_back"
+            android:icon="@drawable/baseline_people_outline_black_18dp"
             android:layout_height="match_parent"
             android:layout_width="wrap_content" />
 
     </com.google.android.material.tabs.TabLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 <!--
     <LinearLayout
         android:id="@+id/hashtag"
@@ -120,13 +131,15 @@
             android:layout_gravity="right"
             android:src="@drawable/outline_add_black_18dp"/>
     </LinearLayout>-->
-    <com.example.dh_lee.projecttmi.ContainerViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="104dp"
+        android:background="#eeeeee"
+        android:isScrollContainer="true"
         android:nestedScrollingEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/tabs"
-        />
+        app:layout_constraintTop_toTopOf="parent" /><!--height ㄱㅏ MATCH_PARENT여야 사이즈 맞음...-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -134,84 +147,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/outline_edit_black_18dp"
         />
 
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ViewContainer">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp">
-<androidx.appcompat.widget.SearchView
-android:layout_height="match_parent"
-android:layout_width="match_parent" />
-    </androidx.appcompat.widget.Toolbar>
-<TabHost
-android:id="@+id/tabHost1"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TabWidget
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <FrameLayout
-        android:id="@+id/tabcontent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:id="@+id/content1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/content2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="dd"/>
-        </LinearLayout>
-
-    </FrameLayout>
-</LinearLayout>
-</TabHost>
-
-<com.google.android.material.floatingactionbutton.FloatingActionButton
-android:id="@+id/fab"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_gravity="bottom|end"
-android:layout_margin="16dp"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-    />
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
--->

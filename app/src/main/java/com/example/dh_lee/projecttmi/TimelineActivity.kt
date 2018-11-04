@@ -1,5 +1,6 @@
 package com.example.dh_lee.projecttmi
 
+import android.content.Context
 import android.content.res.Resources
 import android.graphics.PorterDuff
 import android.os.Bundle
@@ -14,6 +15,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.example.dh_lee.projecttmi.InfiniteScrollListener
 import com.google.android.material.button.MaterialButton
+import android.widget.FrameLayout
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.getSystemService
+
+
 
 class TimelineActivity : Fragment() {
     lateinit var recycle:RecyclerView
@@ -22,15 +28,29 @@ class TimelineActivity : Fragment() {
     val lists:ArrayList<TimelineResponseData> = ArrayList()
     val list=TimelineResponseData("1","이현호","머리가 아프다 ","10월 24일","true")
     var lastVisibleItemPosition:Int=0
+    //lateinit var replyBlock:View
+    //lateinit var addedReply:View
     private lateinit var scrollListener:RecyclerView.OnScrollListener
     private lateinit var likeIt:MaterialButton
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val inf_view =inflater.inflate(R.layout.activity_time_line, container, false)
         val recy= inf_view.findViewById<RecyclerView>(R.id.timeline_recyclerview)
-        var likeit=inf_view.findViewById<MaterialButton>(R.id.like_it)
+        //replyBlock=inflater.inflate(R.layout.timeline_reply,container,false)
+        //addedReply=inf_view.findViewById(R.id.added_reply_block)
+        //var likeit=inf_view.findViewById<MaterialButton>(R.id.like_it)
         val lastVisibleItemPosition:Int=1
-                //val mLayoutManager = LinearLayoutManager(getActivity());
+        //val mLayoutManager = LinearLayoutManager(getActivity());
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
         lists.add(list)
         lists.add(list)
         val context = inf_view.context
@@ -41,31 +61,13 @@ class TimelineActivity : Fragment() {
         recy.addOnScrollListener(InfiniteScrollListener({ Log.e("timelinescroll","will be more request")},linearlayout))
         return inf_view
 
-        }/*
-    private fun setInfiniteScroll(recyclerview:RecyclerView){
-         scrollListener = object:RecyclerView.OnScrollListener(){
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-                lastVisibleItemPosition =layoutManager.findLastVisibleItemPosition()
-                val totalItemCount=recyclerView!!.layoutManager!!.itemCount
-                Log.d("lastvisibleitemposition",lastVisibleItemPosition.toString())
-                if(totalItemCount == lastVisibleItemPosition+1){
-
-                   /* lists.add(list)
-                    lists.add(list)*/
-                    Log.d("is will be plus","true")
-                    recyclerview.removeOnScrollListener(scrollListener)
-                }
-            }
-        }
-    }*/
     }
+    private fun addReple(){
+        val lparams = ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.WRAP_CONTENT,ConstraintLayout.LayoutParams.WRAP_CONTENT)
 
+            //addedReply.layoutParams=
+              //  this.addedReply.addView()
 
-/*
-* class MainTabFragment2 : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.tab_fragment_2, container, false)
-    }
-* */
+      }
+}

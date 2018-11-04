@@ -5,9 +5,10 @@
     <item android:id="@android:id/mask">
         <shape android:shape="rectangle" >
             <!-- Color not displayed,just to tell ripple about the bounds -->
-            <solid android:color="@android:color/black" />
+            <solid android:color="@color/colorPrimary" />
+
         </shape>
     </item>
     <!-- And your drawable -->
-    <item android:drawable="@color/colorPrimary" />
+    <item android:drawable="@color/colorWhite" />
 </ripple>

@@ -20,7 +20,7 @@ class TimelineAdapter(val timelineData:List<TimelineResponseData>, val context: 
     override fun onBindViewHolder(holder: TimelineViewHolder, position: Int) {
         (holder as TimelineViewHolder).bind(timelineData[position])
         if(timelineData[position].islikeit=="true"){
-            holder.iconview.setBackgroundColor(getColor(context,R.color.colorRed))
+            //holder.iconview.setBackgroundColor(getColor(context,R.color.colorRed))
         }
     }
 
@@ -31,52 +31,12 @@ class TimelineAdapter(val timelineData:List<TimelineResponseData>, val context: 
 
 
     class TimelineViewHolder(view:View):RecyclerView.ViewHolder(view){
-        val iconview=itemView.like_it
+        //val iconview=itemView.like_it
         fun bind(item:TimelineResponseData){
-            itemView.author.text=item.author
-            itemView.created.text=item.created
-            itemView.timeline_contents.text=item.contents
+            itemView.timelne_author.text=item.author
+            itemView.timeline_created.text=item.created
+            //itemView.timeline_contents.text=item.contents
         }
     }
 
 }
-/*
-* android:id="@+id/author"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/created"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </LinearLayout>
-        <TextView
-            android:text="사진컨텐츠"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <TextView
-            android:id="@+id/timeline_contents"*/
-/*
-class HospitalAdapter(val items: List<HospitalData>, val context: Context,val clickListener: (HospitalData) -> Unit): RecyclerView.Adapter<HospitalAdapter.HospitalViewHolder>(){
-    override fun getItemCount(): Int {
-        return items.size
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):HospitalViewHolder {
-        val view: View = LayoutInflater.from(context).inflate(R.layout.hospitalcomponent, parent,false)
-        return HospitalViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: HospitalViewHolder, position: Int) {
-        (holder as HospitalViewHolder).bind(items[position],clickListener)
-    }
-
-    class HospitalViewHolder(view: View): RecyclerView.ViewHolder(view){
-        fun bind(item: HospitalData, clickListener: (HospitalData) -> Unit){
-            itemView.hospital_name.text = item.hospital_name
-            itemView.hospital_info.text = item.hospital_info
-            itemView.setOnClickListener{ clickListener(item)}
-        }
-    }
-}
-        */

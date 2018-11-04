@@ -13,7 +13,7 @@ class ContainerViewPager:ViewPager{
     constructor(context: Context): super(context){}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
 
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+    /*override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         var height:Int = 0
         for (i in 0 until childCount) {
             val child = getChildAt(i)
@@ -25,7 +25,7 @@ class ContainerViewPager:ViewPager{
         val heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
-    }
+    }*/
     override fun onTouchEvent(event:MotionEvent):Boolean {
         Log.e("ontouch",super.onTouchEvent(event).toString())
         return this.isPagingEnabled && super.onTouchEvent(event);

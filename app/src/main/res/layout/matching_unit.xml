@@ -9,24 +9,33 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/matching_card"
         android:layout_width="match_parent"
+        android:backgroundTint="@color/colorWhite"
         android:layout_height="110dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/matching_top"
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/for_orientation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/matching_top"
+                android:id="@+id/matching_center"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_marginTop="38dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
                 <TextView
                     android:id="@+id/matching_title"
                     android:layout_height="wrap_content"
                     android:layout_width="250dp"
                     android:layout_marginLeft="16dp"
                     android:text="함께 취업준비해요"
+                    android:textColor="@color/colorText"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -36,6 +45,8 @@
                     android:layout_height="wrap_content"
                     android:text="함께하기"
                     android:layout_marginTop="9dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColor="@color/colorPrimary"
                     android:layout_marginRight="30dp"
                     app:layout_constraintRight_toRightOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -49,12 +60,22 @@
                 android:layout_centerHorizontal="true"
                 app:layout_constraintBottom_toBottomOf="parent">
                 <TextView
-                    android:id="@+id/matching_participant"
+                    android:id="@+id/matching_participant_text"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/colorText"
                     android:layout_marginLeft="16dp"
-                    android:text="참여인원 8/10"
+                    android:text="참여인원"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/matching_participant_number"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:layout_marginLeft="16dp"
+                    android:text="8/10"
+                    app:layout_constraintLeft_toRightOf="@id/matching_participant_text"
                     />
 
                 <TextView
@@ -62,6 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="@color/colorText"
                     app:layout_constraintRight_toRightOf="parent"
                     android:text="2018.10.24"/>
                 <TextView
@@ -69,6 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="서울특별시 화곡 1동"
+                    android:textColor="@color/colorText"
                     app:layout_constraintRight_toRightOf="parent"
                     android:layout_marginRight="16dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,6 +32,7 @@ class WriteTimelineActivity : AppCompatActivity(),AdapterView.OnItemSelectedList
         setContentView(R.layout.activity_write_timeline)
         publicSpinner = findViewById(R.id.topublic)
         toolbar_title.text="이쪽은 매칭 타이틀"
+        toolbar_finish.text="완료"
         //spinnerText=publicSpinner.selectedItem.toString()
         val adapter:ArrayAdapter<CharSequence> =ArrayAdapter.createFromResource(this, R.array.topublic,
                 android.R.layout.simple_spinner_item)
