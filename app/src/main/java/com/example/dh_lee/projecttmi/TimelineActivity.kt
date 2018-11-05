@@ -43,18 +43,7 @@ class TimelineActivity : Fragment() {
         //addedReply=inf_view.findViewById(R.id.added_reply_block)
         //var likeit=inf_view.findViewById<MaterialButton>(R.id.like_it)
         val lastVisibleItemPosition:Int=1
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
-        lists.add(list)
+        addResponse()
         val context = inf_view.context
         val linearlayout=LinearLayoutManager(context)
         //likeit.setBackgroundColor(resources.getColor(R.color.material_blue_grey_800, context.theme))
@@ -75,6 +64,20 @@ class TimelineActivity : Fragment() {
         })
 
     }
+    private fun addResponse(){
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+        lists.add(list)
+    }
+
     private fun addReple(){
         val lparams = ConstraintLayout.LayoutParams(
                 ConstraintLayout.LayoutParams.WRAP_CONTENT,ConstraintLayout.LayoutParams.WRAP_CONTENT)

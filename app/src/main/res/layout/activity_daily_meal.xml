@@ -7,35 +7,40 @@
     android:layout_height="match_parent"
     tools:context=".DailyMeal">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/daily_meal_title_wrapper"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
     <include
         android:id="@+id/meal_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/record_title"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/daily_morning_wrapper"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftof="parent"
-        >
-    <include
-        android:id="@+id/daily_morning"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/meal_component"/>
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <include
+            android:id="@+id/daily_morning"
+            layout="@layout/meal_component"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/daily_lunch_wrapper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent">
+        <!--
         app:layout_constraintLeft_toRightof="@id/daily_morning_wrapper"
-        app:layout_constraintRight_toLeftof="@id/daily_dinner_wrapper"
-        >
+        app:layout_constraintRight_toLeftof="@id/daily_dinner_wrapper"-->
+
     <include
         android:id="@+id/daily_lunch"
         android:layout_width="wrap_content"
@@ -46,7 +51,7 @@
         android:id="@+id/daily_dinner_wrapper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightoof="parent"
+        app:layout_constraintRight_toRightOf="parent"
         >
     <include
         android:id="@+id/daily_dinner"

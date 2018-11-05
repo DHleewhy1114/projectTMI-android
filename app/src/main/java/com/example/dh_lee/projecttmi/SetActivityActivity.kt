@@ -35,19 +35,9 @@ class SetActivityActivity : AppCompatActivity() {
         toolbar_title.text="제목들어감"
         toolbar_finish.text="완료"
 
-        /*
-        val binding:ToolbarBinding = setContentView(this, R.layout.toolbar)
-        val user = com.example.dh_lee.projecttmi.Toolbar("활동 만들기")
-        binding.setUser(user)*/
 
     }
-    /*override fun onStart() {
-        super.onStart()
-        //val a =getDeviceSize(this)
-        //Log.e("headerhegiht",header.size.toString())
-        //Log.e("bodyhegiht",body.layoutParams.height.toString())
-        //a.substractSize(body,header)
-    }*/
+
 
     private fun setIDs(){
         body=findViewById(R.id.set_activity_body)

@@ -16,3 +16,5 @@ data class MatchingResponseData(
 data class WriteTimelineResponseData(
         override val id: String,val author:String,val profile_image:String,val create:String)
 :HTTPResponseData
+
+data class MealListResponseData(override val id:String,val item:String):HTTPResponseData{}

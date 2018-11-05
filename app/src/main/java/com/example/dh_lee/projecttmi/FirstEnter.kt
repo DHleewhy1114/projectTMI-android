@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 
 
 class FirstEnter : AppCompatActivity() {
+    //처음 가입시 뜨는 앱 설명 처음 입장후 sharedpreference를 통해 이후엔 안뜨게
     private lateinit var mViewPager: ViewPager
     //private lateinit var mPagerAdapter:PagerAdapter
     private lateinit var mTabLayout:TabLayout

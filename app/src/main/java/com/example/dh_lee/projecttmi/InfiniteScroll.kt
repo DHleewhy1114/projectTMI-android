@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class InfiniteScrollListener(val func:()->Unit, val layoutManager: LinearLayoutManager):RecyclerView.OnScrollListener(){
+    //무한 스크롤을 위한 리스너
     private var previousTotal = 0
     private var loading = true
     private var visibleThreshold = 2

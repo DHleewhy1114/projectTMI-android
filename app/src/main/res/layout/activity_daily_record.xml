@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/record_title"
+        app:layout_constraintTop_toBottomOf="@id/recorded_daily_drug_list"
         />
 
     <include
@@ -24,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/activity_daily_meal"
+        app:layout_constraintTop_toBottomOf="@id/recorded_daily_meal_list"
         />
 
 

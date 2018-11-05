@@ -16,6 +16,7 @@
         android:id="@+id/daily_drug_recycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/recorded_daily_drug_title"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.pwittchen:infinitescroll-0.0.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/infinitescroll-0.0.2.aar/5faae477a5592b3ad7db0dcdbaa2ffa6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/infinitescroll-0.0.2.aar/5faae477a5592b3ad7db0dcdbaa2ffa6/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.pwittchen/infinitescroll/0.0.2/f5d1c09a917015942be4ea8e9457794e604c5ba0/infinitescroll-0.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
