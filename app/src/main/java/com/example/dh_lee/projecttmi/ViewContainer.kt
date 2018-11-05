@@ -71,7 +71,7 @@ class ViewContainer : AppCompatActivity() {
 
             }
         })
-        /*fab=findViewById(R.id.fab)
+        fab=findViewById(R.id.fab)
         fab.setOnClickListener{
             when(tabs.selectedTabPosition){
                 0->{
@@ -89,7 +89,7 @@ class ViewContainer : AppCompatActivity() {
                     print("")
                 }
             }
-        }*/
+        }
         //chipGroup=findViewById(R.id.chiplist)
         //val con =layoutInflater.inflate(R.layout.activity_matching,null,false)
         //val context=con.context

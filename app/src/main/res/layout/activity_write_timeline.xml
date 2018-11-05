@@ -22,8 +22,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:orientation="vertical">
+            android:background="@color/colorWhite">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/write_timeline_header"
                 android:layout_width="match_parent"
@@ -40,6 +39,8 @@
                     android:id="@+id/author_and_topublic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginStart="12.4dp"
                     android:orientation="vertical"
                     app:layout_constraintLeft_toRightOf="@id/timeline_profile_image"
                     >
@@ -47,7 +48,6 @@
                         android:id="@+id/author"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15.4dp"
                         android:layout_marginTop="4dp"
                         />
                     <!--<LinearLayout
@@ -63,6 +63,7 @@
                             android:id="@+id/topublic"
                             android:layout_height="14dp"
                             android:layout_width="14dp"
+                            android:layout_marginStart="4.6dp"
                             app:layout_constraintTop_toBottomOf="@id/author"
                             />
                     <!--</LinearLayout>-->
@@ -74,22 +75,36 @@
                     android:textSize="14sp"
                     android:textColor="#8a000000"
                     android:lineSpacingExtra="6sp"
-                    android:layout_marginLeft="15.8dp"
+                    android:layout_marginEnd="9.2dp"
                     android:text="날짜"
+                    app:layout_constraintRight_toLeftOf="@id/write_timeline_calender_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <ImageView
+                    android:id="@+id/write_timeline_calender_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/calender_icon"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/write_timeline_contents_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/write_timeline_header">
             <EditText
                 android:id="@+id/write_timeline_contents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="170dp"
                 android:layout_marginLeft="16dp"
-                app:layout_constraintTop_toBottomOf="@id/write_timeline_header"
+                app:layout_constraintTop_totopof="parent"
                 />
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/write_timeline_footer"
                 android:layout_width="match_parent"
@@ -97,23 +112,32 @@
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="16dp"
-                app:layout_constraintTop_toBottomOf="@id/write_timeline_contents"
+                app:layout_constraintTop_toBottomOf="@id/write_timeline_contents_wrapper"
                 android:orientation="horizontal">
-
+                <View
+                    android:id="@+id/baseline_top_footer"
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorText"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintTop_toBottomof="@id/write_timeline_footer"/>
 
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/write_timeline_inbox"
-                    android:layout_height="@dimen/writeTimelineIconSize"
-                    android:layout_width="@dimen/writeTimelineIconSize"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:background="@color/colorWhite"
-                    android:layout_marginRight="10.5dp"
+                    android:layout_marginEnd="10.5dp"
+                    android:layout_marginTop="3dp"
+                    android:backgroundTint="@color/colorWhite"
                     app:layout_constraintRight_toLeftOf="@id/write_timeline_location"
+                    app:layout_constraintTop_toBottomof="@id/baseline_top_footer"
                     android:src="@drawable/inbox"/>
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/write_timeline_location"
-                    android:layout_height="@dimen/writeTimelineIconSize"
-                    android:layout_width="@dimen/writeTimelineIconSize"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:background="@color/colorWhite"
                     app:layout_constraintRight_toRightOf="parent"
                     android:src="@drawable/location"/>

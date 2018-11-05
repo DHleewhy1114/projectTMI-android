@@ -33,6 +33,7 @@ class SetActivityActivity : AppCompatActivity() {
         setIDs()
         setTexts()
         toolbar_title.text="제목들어감"
+        toolbar_finish.text="완료"
 
         /*
         val binding:ToolbarBinding = setContentView(this, R.layout.toolbar)

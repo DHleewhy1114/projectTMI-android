@@ -5,16 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyRecordActivity">
-        <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recorded_before"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.card.MaterialCardView
-                android:layout_margin="@dimen/recordCardMargin"
-                android:layout_width="240dp"
-                android:layout_height="268dp">
-            </com.google.android.material.card.MaterialCardView>
+            app:iconGravity="textStart"
+            app:icon="@drawable/outline_keyboard_arrow_left_black_18dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recorded_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/recorded_before"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recorded_after"
+            android:layout_width="wrap_content"
+            app:iconGravity="textStart"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/outline_keyboard_arrow_right_black_18dp"
+            app:layout_constraintLeft_toRightOf="@id/recorded_day"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/recorded_material_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recorded_drug_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recorded_meal_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recorded_exercise_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

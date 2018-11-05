@@ -5,11 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DailyRecord">
+
     <include
-        android:id="@+id/include_layout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    layout="@layout/record_title"
+        android:id="@+id/recorded_daily_drug_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_daily_drug"
         />
+    <include
+        android:id="@+id/recorded_daily_meal_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/record_title"
+        />
+
+    <include
+        android:id="@+id/recorded_daily_exercise_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_daily_meal"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

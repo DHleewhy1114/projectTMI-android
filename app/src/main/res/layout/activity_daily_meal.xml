@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DailyMeal">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <include
+        android:id="@+id/meal_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/record_title"/>
 
-</android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/daily_morning_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftof="parent"
+        >
+    <include
+        android:id="@+id/daily_morning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/meal_component"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/daily_lunch_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightof="@id/daily_morning_wrapper"
+        app:layout_constraintRight_toLeftof="@id/daily_dinner_wrapper"
+        >
+    <include
+        android:id="@+id/daily_lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/meal_component"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/daily_dinner_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightoof="parent"
+        >
+    <include
+        android:id="@+id/daily_dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/meal_component"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
