@@ -38,7 +38,7 @@ class WriteTimelineActivity : AppCompatActivity(),AdapterView.OnItemSelectedList
                 android.R.layout.simple_spinner_item)
 
         publicSpinner.adapter=adapter
-        publicSpinner.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+        publicSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 val selectedItemText = parent.getItemAtPosition(position) as String
                 // Notify the selected item text
@@ -48,7 +48,7 @@ class WriteTimelineActivity : AppCompatActivity(),AdapterView.OnItemSelectedList
             override fun onNothingSelected(parent: AdapterView<*>) {
 
             }
-        })
+        }
     }
 
 }

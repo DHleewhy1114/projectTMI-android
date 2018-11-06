@@ -11,5 +11,6 @@ class MyRecordActivity : Fragment() {
         val inf_view = inflater.inflate(R.layout.activity_my_record, container, false)
         return inf_view
 
+
     }
 }

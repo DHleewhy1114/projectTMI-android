@@ -75,32 +75,19 @@ class ViewContainer : AppCompatActivity() {
         fab.setOnClickListener{
             when(tabs.selectedTabPosition){
                 0->{
-                    setintent(DailyRecord())
+                    setintent(WriteTimelineActivity())
                 }
                 1->{
-
-                   setintent(WriteTimelineActivity())
-
+                    setintent(SetActivityActivity())
                 }
                 2->{
-                    setintent(SetActivityActivity())
+                    setintent(WriteTimelineActivity())//추후에 작성activity
                 }
                 else->{
                     print("")
                 }
             }
         }
-        //chipGroup=findViewById(R.id.chiplist)
-        //val con =layoutInflater.inflate(R.layout.activity_matching,null,false)
-        //val context=con.context
-        //makeChip(context,findViewById(R.id.chiplist),"dsds")
-
-    }
-
-    override fun onStart() {
-        super.onStart()
-        //val a =getDeviceSize(this)
-        //a.substractSizeWithView(viewPager,viewContainerHeader)
     }
     fun setintent(app:AppCompatActivity){
         val intent = Intent(this,app::class.java)
@@ -108,19 +95,9 @@ class ViewContainer : AppCompatActivity() {
 
     }
     fun setuptabIcon(tabs:TabLayout){
-        tabs.getTabAt(0)!!.setIcon(tabIcons[0])
-        tabs.getTabAt(1)!!.setIcon(tabIcons[1])
-        tabs.getTabAt(2)!!.setIcon(tabIcons[2])
-    }
-    fun makeChip(context:Context,chipGroup: ChipGroup,str:String){
-        val chip = Chip(context)
-        chip.text=str
-        chip.isCloseIconVisible=true
-        chipGroup.addView(chip as View)
-        chip.setOnCloseIconClickListener{
-            chipGroup.removeView(chip as View)
-        }
-
+        tabs.getTabAt(0)!!.setIcon(tabIcons[1])
+        tabs.getTabAt(1)!!.setIcon(tabIcons[2])
+        tabs.getTabAt(2)!!.setIcon(tabIcons[0])
     }
 
     override fun onBackPressed() {
@@ -141,9 +118,9 @@ class mPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
     override fun getItem(i: Int): Fragment {
         when (i) {
-            0 -> return MyRecordActivity()
-            1 -> return TimelineActivity()
-            2 -> return MatchingActivity()
+            0 -> return TimelineActivity()
+            1 -> return MatchingActivity()
+            2 -> return DailyRecord()
             else -> {
                 return MainTabFragment1()
             }
@@ -152,33 +129,12 @@ class mPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence {
         when (position) {
-            0 -> return "내 기록"
-            1 -> return "타임라인"
-            2 -> return "매칭"
+            0 -> return "타임라인"
+            1 -> return "매칭"
+            2 -> return "내 기록"
             else -> {
                 return ""
             }
         }
     }
 }
-
-/*
-private const val ARG_OBJECT = "object"
-
-// Instances of this class are fragments representing a single
-// object in our collection.
-class mObjectFragment : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
-        // The last two arguments ensure LayoutParams are inflated properly.
-        val rootView: View = inflater.inflate(
-                R.layout.tab_fragment_1, container, false)
-        arguments?.takeIf { it.containsKey(ARG_OBJECT) }?.apply {
-            val textView: TextView = rootView.findViewById(android.R.id.text1)
-            textView.text = getInt(ARG_OBJECT).toString()
-        }
-        return rootView
-    }
-}*/

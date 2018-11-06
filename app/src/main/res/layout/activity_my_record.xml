@@ -33,6 +33,12 @@
         android:id="@+id/recorded_material_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+       <Frag
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       </Frag>
+        <!--
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/recorded_drug_daily"
             android:layout_width="match_parent"
@@ -58,7 +64,7 @@
             android:layout_height="wrap_content">
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+-->
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

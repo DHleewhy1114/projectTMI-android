@@ -6,13 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".DailyRecord">
 
-    <include
+    <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recorded_daily_drug_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recorded_daily_meal_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<include
         android:id="@+id/recorded_daily_drug_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/activity_daily_drug"
         />
-    <include
+         <include
         android:id="@+id/recorded_daily_meal_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,6 +36,6 @@
         layout="@layout/activity_daily_meal"
         app:layout_constraintTop_toBottomOf="@id/recorded_daily_meal_list"
         />
-
+-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

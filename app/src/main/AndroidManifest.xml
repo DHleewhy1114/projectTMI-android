@@ -26,7 +26,6 @@
         <activity android:name=".WriteTimelineActivity" />
         <activity android:name=".SetActivityActivity" />
         <activity android:name=".DailyRecord" />
-        <activity android:name=".DailyMeal" />
         <activity android:name=".DailyExercise" />
         <activity android:name=".DailyDrug"></activity>
     </application>
